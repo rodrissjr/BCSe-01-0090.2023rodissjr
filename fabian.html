@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BusinessBoost</title>
+    <style>
+        /* Your existing CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #ff5733;
+        }
+        header h1 {
+            font-size: 4rem;
+            font-family: 'Brush Script MT', cursive;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+        }
+        header p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+        marquee {
+            background-color: #ff5733;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+        }
+        .secondary-marquee {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+        }
+        nav ul {
+            list-style: none;
+            background: linear-gradient(90deg, #333, #555);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+        nav ul li a:hover {
+            background-color: #777;
+            border-radius: 5px;
+        }
+        main {
+            margin: 20px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+        }
+        
+        }
+        .image-gallery {
+            display: flex;
+            justify-content: space-between;
+            margin: 200px;
+        }
+        .image-gallery img {
+            width: 550px;
+            height: 400px;
+            border: 6px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form label {
+            margin: 5px 0;
+        }
+        form input, form textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        form button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        form button:hover {
+            background-color: #218838;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: linear-gradient(90deg, #333, #555);
+            color: white;
+            margin-top: 20px;
+        }
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%;
+            border-radius: 10px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .form-group input[type="submit"] {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to BusinessBoost</h1>
+        <p>Empowering your business with innovative strategies and solutions.</p>
+    </header>
+    <marquee behavior="scroll" direction="left" scrollamount="8">
+        <strong> Ready to transform your business? Contact us now! 📞 +255752389607 | +255618389607 | 📧 jamesrodriss43@gmail.com</strong>
+    </marquee>
+    <marquee class="secondary-marquee" behavior="scroll" direction="left" scrollamount="10">
+        <strong>BusinessBoost is currently empowering businesses in Tanzania. Get ready, the world is next! Stay tuned for global opportunities! </strong>
+    </marquee>
+    <nav>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#clients">Our Clients</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#" id="signUpMenu">Sign Up</a></li>
+            <li><a href="#" id="loginMenu">Login</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>About BusinessBoost</h2>
+            <p>At BusinessBoost, we specialize in guiding companies to achieve their goals through customized strategies and innovative solutions. We are committed to helping businesses thrive in a competitive market.</p>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Business Strategy Development</li>
+                <li>Marketing and Branding Solutions</li>
+                <li>Financial Planning and Analysis</li>
+            </ul>
+        </section>
+
+        <section id="clients">
+            <h2>Our Clients</h2>
+            <p>We have had the privilege of working with a diverse range of clients, from small startups to large corporations. Our clients trust us to deliver results that drive their business forward.</p>
+            <div class="image-gallery">
+                <img src="image2.jpg">
+                <img src="image3.jpg">
+                <img src="image4.jpg">
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <p>Check out some of our recent projects and see how we've helped other businesses achieve their goals.</p>
+            <div class="image-gallery">
+                <img src="project1.jpg" alt="Project 1">
+                <img src="project2.jpg" alt="Project 2">
+                <img src="project3.jpg" alt="Project 3">
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <p>Here's what some of our clients have to say about working with us:</p>
+            <blockquote>
+                "BusinessBoost has been instrumental in helping us grow our business. Their strategic insights and innovative solutions have made a significant impact on our bottom line."
+            </blockquote>
+            <blockquote>
+                "The team at BusinessBoost is professional, knowledgeable, and truly cares about the success of their clients. We highly recommend their services."
+            </blockquote>
+        </section>
+
+        <section id="blog">
+            <h2>Blog</h2>
+            <p>Stay updated with the latest trends and insights in the business world by reading our blog.</p>
+            <article>
+                <h3>5 Strategies for Business Growth in 2025</h3>
+                <p>Discover the top strategies that can help your business grow and thrive in the coming year.</p>
+            </article>
+            <article>
+                <h3>The Importance of Branding in Today's Market</h3>
+                <p>Learn why branding is more important than ever and how you can build a strong brand that resonates with your audience.</p>
+            </article>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or would like to discuss how we can help your business, please don't hesitate to get in touch.</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 BusinessBoost. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Sign Up Modal -->
+    <div id="signUpModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeSignUp">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signUpForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Your Full Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="registrationNumber">Registration Number:</label>
+                    <input type="text" id="registrationNumber" name="registrationNumber" placeholder="e.g., BCS-00-0000-0000" required>
+                </div>
+                <div class="form-group">
+                    <label for="sex">Sex:</label>
+                    <select id="sex" name="sex" required>
+                        <option value="">Select your gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="region">Region:</label>
+                    <select id="region" name="region" required>
+                        <option value="">Select your region</option>
+                        <option value="region1">Region 1</option>
+                        <option value="region2">Region 2</option>
+                        <option value="region3">Region 3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="district">District:</label>
+                    <select id="district" name="district" required>
+                        <option value="">Select your district</option>
+                        <option value="district1">District 1</option>
+                        <option value="district2">District 2</option>
+                        <option value="district3">District 3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Your Password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Your Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Sign Up">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email or Registration Number:</label>
+                    <input type="text" id="loginEmail" name="loginEmail" placeholder="Enter your email or registration number" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Login">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        // Modal functionality
+        const signUpMenu = document.getElementById('signUpMenu');
+        const loginMenu = document.getElementById('loginMenu');
+        const signUpModal = document.getElementById('signUpModal');
+        const loginModal = document.getElementById('loginModal');
+        const closeSignUp = document.getElementById('closeSignUp');
+        const closeLogin = document.getElementById('closeLogin');
+
+        signUpMenu.onclick = function() {
+            signUpModal.style.display = 'block';
+        }
+
+        loginMenu.onclick = function() {
+            loginModal.style.display = 'block';
+        }
+
+        closeSignUp.onclick = function() {
+            signUpModal.style.display = 'none';
+        }
+
+        closeLogin.onclick = function() {
+            loginModal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == signUpModal) {
+                signUpModal.style.display = 'none';
+            }
+            if (event.target == loginModal) {
+                loginModal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
